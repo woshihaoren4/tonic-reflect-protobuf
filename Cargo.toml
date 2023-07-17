@@ -1,0 +1,25 @@
+[package]
+authors = [
+  "wang dong <1443965173@qq.com>"
+]
+categories = ["network-programming", "asynchronous"]
+description = """
+support protobuf crate to 'tonic' gRPC reflect
+"""
+edition = "2021"
+homepage = "https://github.com/woshihaoren4/tonic-reflect-protobuf"
+documentation = "https://docs.rs/tonic-reflect-protobuf/0.9.0"
+keywords = ["rpc", "grpc", "async", "reflection"]
+license = "MIT"
+name = "tonic-reflect-protobuf"
+readme = "README.md"
+repository = "https://github.com/woshihaoren4/tonic-reflect-protobuf"
+version = "0.9.0"
+
+[dependencies]
+prost = "0.11"
+tokio = {version = "1.0", features = ["sync", "rt"]}
+tokio-stream = {version = "0.1", features = ["net"]}
+tonic = { version = "0.9", default-features = false, features = ["codegen", "prost"] }
+protobuf = "3.2.0"
+
